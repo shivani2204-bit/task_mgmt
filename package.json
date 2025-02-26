@@ -4,8 +4,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
-    "build": "rimraf dist && mkdir dist && cp -r src dist && cp package.json dist",
+    "clean": "rimraf dist",
+    "build": "npm run clean && mkdir dist && cp -r src dist && cp package.json dist",
+    "test": "jest --coverage",
     "start": "nodemon server.js"
   },
   "author": "",
