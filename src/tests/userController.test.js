@@ -28,7 +28,7 @@ describe('User Authentication', () => {
         console.log("Response:", res.text);
 
         expect(res.status).toBe(201);
-        expect(res.body.user).toHaveProperty('email', 'testus@mail.com');
+        expect(res.body.user).toHaveProperty('email', 'testu@mail.com');
     });
 
     test('Should not allow duplicate emails', async () => {
