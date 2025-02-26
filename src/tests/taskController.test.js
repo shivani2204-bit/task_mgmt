@@ -94,7 +94,7 @@ describe('Task Management', () => {
 
         const userRes = await request(app)
             .post('/api/user/register')
-            .send({ username: 'yup', email: 'yup@mail.com', password: 'password123' });
+            .send({ username: 'yupgit', email: 'yupgit@mail.com', password: 'password123' });
 
         console.log("User creation response:", userRes.body);
 
@@ -105,7 +105,7 @@ describe('Task Management', () => {
 
         const loginRes = await request(app)
             .post('/api/user/login')
-            .send({ email: 'yup@mail.com', password: 'password123' });
+            .send({ email: 'yupgit@mail.com', password: 'password123' });
 
         console.log("User login response:", loginRes.body);
 

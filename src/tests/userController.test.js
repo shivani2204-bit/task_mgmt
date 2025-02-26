@@ -22,7 +22,7 @@ describe('User Authentication', () => {
     test('Should create a user successfully', async () => {
         const res = await request(app)
             .post('/api/user/register')
-            .send({ username: 'testus', email: 'testus@mail.com', password: 'password123' });
+            .send({ username: 'gittestus', email: 'gittestus@mail.com', password: 'password123' });
 
         console.log("Status:", res.status);
         console.log("Response:", res.text);
