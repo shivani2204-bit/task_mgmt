@@ -1,79 +1,3 @@
-// import request from 'supertest';
-// import app from '../../server.js';
-// import mongoose from 'mongoose';
-
-// describe('Task Management', () => {
-//     let token;
-//     let userId;
-
-//     beforeAll(async () => {
-//         await mongoose.disconnect();
-//         await mongoose.connect(process.env.MONGO_TEST_URL);
-
-//         const userRes = await request(app)
-//             .post('/api/user/register')
-//             .send({ username: 'taskUser', email: 'tas@mail.com', password: 'password123' });
-
-//         console.log("User creation response:", userRes.body);
-
-//         expect(userRes.status).toBe(201);
-
-//         const userId = userRes.body?.user?._id;
-//         expect(userId).toBeDefined();
-
-//         const loginRes = await request(app)
-//             .post('/api/user/login')
-//             .send({ email: 'task5@mail.com', password: 'password123' });
-
-//         token = loginRes.body.token;
-//     });
-
-//     afterAll(async () => {
-//         await mongoose.connection.close();
-//     });
-
-//     beforeEach(async () => {
-//         await User.deleteMany({});
-//         await Task.deleteMany({});
-//     });
-
-//     test('Should create a task successfully', async () => {
-//         const res = await request(app)
-//             .post('/api/task/task')
-//             .set('Authorization', `Bearer ${token}`)
-//             .send({ title: 'Test Task', description: 'Testing task creation', assignedTo: userId });
-
-//         expect(res.status).toBe(201);
-//         expect(res.body.task).toHaveProperty('title', 'Test Task');
-//     });
-
-//     test('Should not allow unauthorized task creation', async () => {
-//         const res = await request(app)
-//             .post('/api/task/task')
-//             .send({ title: 'Unauthorized Task', description: 'No auth' });
-
-//         expect(res.status).toBe(401);
-//     });
-
-//     test('Should update task status', async () => {
-//         const taskRes = await request(app)
-//             .post('/api/task/task')
-//             .set('Authorization', `Bearer ${token}`)
-//             .send({ title: 'Update Task', description: 'Testing update', assignedTo: userId });
-
-//         const taskId = taskRes.body.task._id;
-
-//         const updateRes = await request(app)
-//             .patch(`/api/task/tasks/${taskId}/status`)
-//             .set('Authorization', `Bearer ${token}`)
-//             .send({ status: 'completed' });
-
-//         expect(updateRes.status).toBe(200);
-//         expect(updateRes.body.task.status).toBe('completed');
-//     });
-// });
-
-
 import request from 'supertest';
 import app from '../../server.js';
 import mongoose from 'mongoose';
@@ -94,7 +18,7 @@ describe('Task Management', () => {
 
         const userRes = await request(app)
             .post('/api/user/register')
-            .send({ username: 'yupgit', email: 'yupgit@mail.com', password: 'password123' });
+            .send({ username: 'yupgit1', email: 'yupgit1@mail.com', password: 'password123' });
 
         console.log("User creation response:", userRes.body);
 
@@ -105,7 +29,7 @@ describe('Task Management', () => {
 
         const loginRes = await request(app)
             .post('/api/user/login')
-            .send({ email: 'yupgit@mail.com', password: 'password123' });
+            .send({ email: 'yupgit1@mail.com', password: 'password123' });
 
         console.log("User login response:", loginRes.body);
 
