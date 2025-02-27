@@ -3,6 +3,7 @@ import app from '../../server.js';
 import mongoose from 'mongoose';
 
 describe('User Authentication', () => {
+    let randomEmail;
     beforeAll(async () => {
         await mongoose.disconnect();
         await mongoose.connect(process.env.MONGO_TEST_URL);
@@ -20,15 +21,16 @@ describe('User Authentication', () => {
     });
 
     test('Should create a user successfully', async () => {
+        randomEmail = `user${Date.now()}@mail.com`;
         const res = await request(app)
             .post('/api/user/register')
-            .send({ username: 'gittestus', email: 'gittestus@mail.com', password: 'password123' });
+            .send({ username: 'g1', email: randomEmail, password: 'password123' });
 
         console.log("Status:", res.status);
         console.log("Response:", res.text);
 
         expect(res.status).toBe(201);
-        expect(res.body.user).toHaveProperty('email', 'testus@mail.com');
+        expect(res.body.user).toHaveProperty('email', randomEmail);
     });
 
     test('Should not allow duplicate emails', async () => {

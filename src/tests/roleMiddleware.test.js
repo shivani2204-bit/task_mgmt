@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals';
-import { isAdmin } from "../middilware/rolemiddilware.js";
+import { isAdmin } from "../middilware/roleMiddilware.js";
 
 describe('Role Middleware', () => {
     let req, res, next;
