@@ -22,13 +22,13 @@ describe('User Authentication', () => {
     test('Should create a user successfully', async () => {
         const res = await request(app)
             .post('/api/user/register')
-            .send({ username: 'giuser', email: 'giuser@mail.com', password: 'password123' });
+            .send({ username: 'giser', email: 'giser@mail.com', password: 'password123' });
 
         console.log("Status:", res.status);
         console.log("Response:", res.text);
 
         expect(res.status).toBe(201);
-        expect(res.body.user).toHaveProperty('email', 'giuser@mail.com');
+        expect(res.body.user).toHaveProperty('email', 'giser@mail.com');
     });
 
     test('Should not allow duplicate emails', async () => {
