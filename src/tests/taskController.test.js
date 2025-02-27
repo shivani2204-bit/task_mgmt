@@ -104,7 +104,7 @@ describe('Task Management', () => {
         await mongoose.disconnect();
         await mongoose.connect(process.env.MONGO_TEST_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
-        randomEmail = `user${Date.now()}@mail.com`;
+        randomEmail = `task${Date.now()}@mail.com`;
         const userRes = await request(app)
             .post('/api/user/register')
             .send({ username: 'g4g', email: randomEmail, password: 'password123' });

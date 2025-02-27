@@ -20,15 +20,16 @@ describe('User Authentication', () => {
     });
 
     test('Should create a user successfully', async () => {
+        randomEmail = `user${Date.now()}@mail.com`;
         const res = await request(app)
             .post('/api/user/register')
-            .send({ username: 'g1', email: 'g1@mail.com', password: 'password123' });
+            .send({ username: 'g1', email: randomEmail, password: 'password123' });
 
         console.log("Status:", res.status);
         console.log("Response:", res.text);
 
         expect(res.status).toBe(201);
-        expect(res.body.user).toHaveProperty('email', 'g1@mail.com');
+        expect(res.body.user).toHaveProperty('email', randomEmail);
     });
 
     test('Should not allow duplicate emails', async () => {
