@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <coverage generated="1740640037546" clover="3.2.0">
   <project timestamp="1740640037547" name="All files">
     <metrics statements="152" coveredstatements="46" conditionals="51" coveredconditionals="6" methods="15" coveredmethods="4" elements="218" coveredelements="56" complexity="0" loc="152" ncloc="152" packages="7" files="12" classes="12"/>
+=======
+<coverage generated="1740572036233" clover="3.2.0">
+  <project timestamp="1740572036233" name="All files">
+    <metrics statements="152" coveredstatements="62" conditionals="51" coveredconditionals="16" methods="15" coveredmethods="7" elements="218" coveredelements="85" complexity="0" loc="152" ncloc="152" packages="7" files="12" classes="12"/>
+>>>>>>> e70ca86f9d2a1dc5ecf4bbf6633a899d6955a9fd
     <package name="sample_build">
       <metrics statements="14" coveredstatements="11" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
       <file name="math.js" path="C:\Users\vhits\Documents\sample_build\math.js">
@@ -10,7 +16,11 @@
         <line num="6" count="1" type="stmt"/>
       </file>
       <file name="server.js" path="C:\Users\vhits\Documents\sample_build\server.js">
+<<<<<<< HEAD
         <metrics statements="12" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="0"/>
+=======
+        <metrics statements="12" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
+>>>>>>> e70ca86f9d2a1dc5ecf4bbf6633a899d6955a9fd
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
@@ -18,7 +28,11 @@
         <line num="11" count="2" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
+<<<<<<< HEAD
         <line num="15" count="0" type="stmt"/>
+=======
+        <line num="15" count="1" type="stmt"/>
+>>>>>>> e70ca86f9d2a1dc5ecf4bbf6633a899d6955a9fd
         <line num="18" count="2" type="stmt"/>
         <line num="19" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="20" count="0" type="stmt"/>
@@ -45,7 +59,11 @@
       </file>
     </package>
     <package name="sample_build.src.controllers">
+<<<<<<< HEAD
       <metrics statements="102" coveredstatements="8" conditionals="41" coveredconditionals="0" methods="8" coveredmethods="0"/>
+=======
+      <metrics statements="102" coveredstatements="23" conditionals="41" coveredconditionals="10" methods="8" coveredmethods="2"/>
+>>>>>>> e70ca86f9d2a1dc5ecf4bbf6633a899d6955a9fd
       <file name="taskController.js" path="C:\Users\vhits\Documents\sample_build\src\controllers\taskController.js">
         <metrics statements="74" coveredstatements="6" conditionals="24" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="6" count="2" type="stmt"/>
@@ -124,21 +142,32 @@
         <line num="174" count="0" type="stmt"/>
       </file>
       <file name="userController.js" path="C:\Users\vhits\Documents\sample_build\src\controllers\userController.js">
+<<<<<<< HEAD
         <metrics statements="28" coveredstatements="2" conditionals="17" coveredconditionals="0" methods="2" coveredmethods="0"/>
+=======
+        <metrics statements="28" coveredstatements="17" conditionals="17" coveredconditionals="10" methods="2" coveredmethods="2"/>
+>>>>>>> e70ca86f9d2a1dc5ecf4bbf6633a899d6955a9fd
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="9" count="0" type="cond" truecount="0" falsecount="5"/>
         <line num="10" count="0" type="stmt"/>
+<<<<<<< HEAD
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="15" count="0" type="stmt"/>
+=======
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="5" type="stmt"/>
+>>>>>>> e70ca86f9d2a1dc5ecf4bbf6633a899d6955a9fd
         <line num="19" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="40" count="2" type="stmt"/>
+<<<<<<< HEAD
         <line num="41" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
         <line num="44" count="0" type="cond" truecount="0" falsecount="4"/>
@@ -151,6 +180,20 @@
         <line num="55" count="0" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
         <line num="64" count="0" type="stmt"/>
+=======
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="44" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+>>>>>>> e70ca86f9d2a1dc5ecf4bbf6633a899d6955a9fd
         <line num="74" count="0" type="stmt"/>
         <line num="75" count="0" type="stmt"/>
       </file>
