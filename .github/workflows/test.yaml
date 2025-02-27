@@ -22,11 +22,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+
     - name: "Installing dependencies"
       run: npm ci
 
     - name: "Running Test cases"
-      run: npm test -- --detectOpenHandles --verbose
+      env:
+        MONGO_TEST_URL: ${{ secrets.MONGO_TEST_URL }}
+      run: npm test -- --detectOpenHandles --verbose || (echo "Tests failed! Check logs." && exit 1)
 
   build:
 
@@ -43,6 +46,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+
     - name: "Installing dependencies"
       run: npm ci
      

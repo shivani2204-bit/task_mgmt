@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 describe('User Authentication', () => {
     beforeAll(async () => {
         await mongoose.disconnect();
-        await mongoose.connect("mongodb+srv://jaiswalshivanivhits:shivani22@cluster0.djusjqb.mongodb.net/Task_test?retryWrites=true&w=majority&appName=Cluster0");
+        await mongoose.connect(process.env.MONGO_TEST_URL);
     });
 
     afterAll(async () => {
@@ -22,13 +22,13 @@ describe('User Authentication', () => {
     test('Should create a user successfully', async () => {
         const res = await request(app)
             .post('/api/user/register')
-            .send({ username: 'freee', email: 'freee@mail.com', password: 'password123' });
+            .send({ username: 'g', email: 'g@mail.com', password: 'password123' });
 
         console.log("Status:", res.status);
         console.log("Response:", res.text);
-        console.log("User creation response1111:", res.body);
+
         expect(res.status).toBe(201);
-        expect(res.body.user).toHaveProperty('email', 'freee@mail.com');
+        expect(res.body.user).toHaveProperty('email', 'g@mail.com');
     });
 
     test('Should not allow duplicate emails', async () => {
