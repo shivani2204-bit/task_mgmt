@@ -1,4 +1,3 @@
-jest.setTimeout(30000);
 import request from 'supertest';
 import app from '../../server.js';
 import mongoose from 'mongoose';
