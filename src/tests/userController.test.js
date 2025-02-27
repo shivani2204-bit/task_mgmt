@@ -3,6 +3,7 @@ import app from '../../server.js';
 import mongoose from 'mongoose';
 
 describe('User Authentication', () => {
+    let randomEmail;
     beforeAll(async () => {
         await mongoose.disconnect();
         await mongoose.connect(process.env.MONGO_TEST_URL);
