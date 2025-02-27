@@ -24,11 +24,6 @@ jobs:
         cache: 'npm'
     - name: "Installing dependencies"
       run: npm ci
-     
-    - name: Create .env file
-      run: |
-        echo MONGO_TEST_URL = "mongodb+srv://jaiswalshivanivhits:shivani22@cluster0.djusjqb.mongodb.net/Task_test?retryWrites=true&w=majority&appName=Cluster0" > .env
-        echo "JWT_SECRET_KEY = "fjsdfkjslkfsf"" >> .env  # Add more if needed
 
     - name: "Running Test cases"
       run: npm test -- --detectOpenHandles --verbose

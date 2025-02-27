@@ -14,7 +14,7 @@ describe('Task Management', () => {
 
     beforeAll(async () => {
         await mongoose.disconnect();
-        await mongoose.connect(process.env.MONGO_TEST_URL);
+        await mongoose.connect("mongodb+srv://jaiswalshivanivhits:shivani22@cluster0.djusjqb.mongodb.net/Task_test?retryWrites=true&w=majority&appName=Cluster0");
 
         const userRes = await request(app)
             .post('/api/user/register')
