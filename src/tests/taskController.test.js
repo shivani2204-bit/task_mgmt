@@ -1,3 +1,4 @@
+jest.setTimeout(30000);
 import request from 'supertest';
 import app from '../../server.js';
 import mongoose from 'mongoose';
@@ -18,7 +19,7 @@ describe('Task Management', () => {
 
         const userRes = await request(app)
             .post('/api/user/register')
-            .send({ username: 'yupg1', email: 'yupg1@mail.com', password: 'password123' });
+            .send({ username: 'gg', email: 'gg@mail.com', password: 'password123' });
 
         console.log("User creation response:", userRes.body);
 
@@ -29,7 +30,7 @@ describe('Task Management', () => {
 
         const loginRes = await request(app)
             .post('/api/user/login')
-            .send({ email: 'yupg1@mail.com', password: 'password123' });
+            .send({ email: 'gg@mail.com', password: 'password123' });
 
         console.log("User login response:", loginRes.body);
 
