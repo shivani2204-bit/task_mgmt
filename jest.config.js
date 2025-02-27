@@ -1,4 +1,5 @@
 export default {
   testEnvironment: 'node',
-  testPathIgnorePatterns: ['<rootDir>/dist/']
+  testPathIgnorePatterns: ['<rootDir>/dist/'],
+  forceExit: true,
 };
