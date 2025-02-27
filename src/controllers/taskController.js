@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import { Task } from '../models/task.js';
 import { User } from '../models/user.js';
+import { Task } from '../models/task.js';
 
 
 export const createTask = async (req, res) => {

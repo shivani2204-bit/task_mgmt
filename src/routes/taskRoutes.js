@@ -1,5 +1,5 @@
 import express from 'express';
-import { createTask, createTaskWithUserAssignment, deleteTask, getAllTasks, getTasksByUser, updateTaskStatus } from '../controllers/TaskController.js';
+import { createTask, createTaskWithUserAssignment, deleteTask, getAllTasks, getTasksByUser, updateTaskStatus } from '../controllers/taskController.js';
 import { isAdmin } from '../middilware/rolemiddilware.js';
 import { authenticate } from '../middilware/authMiddilware.js';
 

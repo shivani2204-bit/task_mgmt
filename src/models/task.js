@@ -33,5 +33,5 @@ const taskSchema = new Index.mongoose.Schema(
 // Create an index on 'assignedTo' for faster searches
 taskSchema.index({ assignedTo: 1 });
 
-const Task =Index.mongoose.model("Task", taskSchema);
+const Task = Index.mongoose.model("Task", taskSchema);
 export { Task }
