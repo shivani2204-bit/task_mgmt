@@ -21,7 +21,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm cis
+        run: npm ci
 
       - name: Deploy to Vercel
         env:
