@@ -12,7 +12,7 @@ app.use("/api/user", userRouter);
 app.use("/api/task", taskRouter);
 
 app.get('/', (req, res) => {
-    res.send("hello world of testing the deployment...");
+    res.send("hello world of testing the deployment on vercel...");
 });
 
 console.log("Current Environment:", process.env.NODE_ENV);
